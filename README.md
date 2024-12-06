@@ -40,8 +40,8 @@ KuroToDoList is a simple to-do list web application that helps users manage thei
 4. Open your browser and navigate to 'http://localhost:3000' to access the application.
 
 ## Usage - CRUD
-**Adding a Task**: Click on the "+ Add Task" button, fill in the task details, and submit the form.
-**Completing a Task**: Click on the checkbox next to a task to mark it as completed.
-**Deleting a Task**: Click on the trash icon next to a task to delete it.
-**Viewing History**: Switch to the "History" tab to view completed and deleted tasks.
-**Leveling Up**: Complete tasks to earn XP and level up.
+- **Adding a Task**: Click on the "+ Add Task" button, fill in the task details, and submit the form.
+- **Completing a Task**: Click on the checkbox next to a task to mark it as completed.
+- **Deleting a Task**: Click on the trash icon next to a task to delete it.
+- **Viewing History**: Switch to the "History" tab to view completed and deleted tasks.
+- **Leveling Up**: Complete tasks to earn XP and level up.
