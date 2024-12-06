@@ -27,15 +27,14 @@ KuroToDoList is a simple to-do list web application that helps users manage thei
 ### Installation
 
 1. Clone the repository:
-   bash
-   git clone https://github.com/yourusername/KuroToDoList.git
-   cd KuroToDoList
+   - git clone https://github.com/yourusername/KuroToDoList.git
+   - cd KuroToDoList
 
 2. Install the dependencies:
-    npm install
+    - npm install
 
 3. Start the server:
-    node server.js
+    - node server.js
 
 4. Open your browser and navigate to 'http://localhost:3000' to access the application.
 
