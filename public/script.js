@@ -92,7 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // This function updates the user's level display
     const renderLevel = () => {
         const { level, expNeeded, totalExp } = calculateLevel(); // Get the current level info
-        document.getElementById('levelText').textContent = `Level: ${level}`; // Show level
+        document.getElementById('levelText').textContent = `Level: ${level}`; // Show level in nav
+        document.getElementById('levelTextDisplay').textContent = `Level: ${level}`; // Show level in Level Section
         document.getElementById('expText').textContent = `${userExp - totalExp} / ${expNeeded}`; // Show experience points
     
         // Update the progress bar in the level section

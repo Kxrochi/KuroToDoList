@@ -11,6 +11,22 @@ h1 {
     text-align: center;
 }
 
+nav {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+}
+
+nav div {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
 nav button {
     background: none;
     border: none;
@@ -68,7 +84,7 @@ th, td {
 }
 
 th {
-    background-color: #6b46c1;
+    background-color: #007BFF;
     color: white;
     text-transform: uppercase; /* Makes headers look more professional */
     font-weight: bold;
@@ -121,7 +137,7 @@ body.dark-mode table {
 }
 
 body.dark-mode th {
-    background-color: #6b46c1; /* Change header color for dark mode */
+    background-color: #125082; /* Change header color for dark mode */
     color: white; /* Ensure header text is visible */
 }
 
@@ -130,27 +146,13 @@ body.dark-mode td {
 }
 
 
-nav {
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #125082;
-    color: white;
-}
 
-nav div {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-}
 
 
 
 .btn {
     padding: 10px 20px;
-    background-color: #6b46c1;
+    background-color: #008080; /* Teal */
     color: white;
     border: none;
     border-radius: 5px;
@@ -160,7 +162,7 @@ nav div {
 }
 
 .btn:hover {
-    background-color: #553c9a;
+    background-color: #006666; /* Darker teal for hover effect */
     transform: scale(1.05); /* Adds a subtle scaling effect */
 }
 
