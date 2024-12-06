@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KURO's To-Do</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode-toggle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav>
+        <div>TO-DO</div>
+        <div>
+            <button id="homeBtn">Home</button>
+            <button id="levelBtn">Level</button>
+            <button id="historyBtn">History</button>
+            
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle" />
+                
+                <div class="slider round">
+                    <div class="sun-moon">
+                        <svg viewBox="0 0 100 100" class="moon-dot" id="moon-dot-1">
+                            <circle r="50" cy="50" cx="50"></circle>
+                        </svg>
+                        <svg viewBox="0 0 100 100" class="moon-dot" id="moon-dot-2">
+                            <circle r="50" cy="50" cx="50"></circle>
+                        </svg>
+                        <svg viewBox="0 0 100 100" class="moon-dot" id="moon-dot-3">
+                            <circle r="50" cy="50" cx="50"></circle>
+                        </svg>
+                        <svg viewBox="0 0 100 100" class="light-ray" id="light-ray-1">
+                            <circle r="50" cy="50" cx="50"></circle>
+                        </svg>
+                        <svg viewBox="0 0 100 100" class="light-ray" id="light-ray-2">
+                            <circle r="50" cy="50" cx="50"></circle>
+                        </svg>
+                        <svg viewBox="0 0 100 100" class="light-ray" id="light-ray-3">
+                            <circle r="50" cy="50" cx="50"></circle>
+                        </svg>
+                    </div>
+                    <div class="stars">
+                        <svg viewBox="0 0 20 20" class="star" id="star-1">
+                            <path d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"></path>
+                        </svg>
+                        <svg viewBox="0 0 20 20" class="star" id="star-2">
+                            <path d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"></path>
+                        </svg>
+                        <svg viewBox="0 0 20 20" class="star" id="star-3">
+                            <path d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"></path>
+                        </svg>
+                        <svg viewBox="0 0 20 20" class="star" id="star-4">
+                            <path d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </label>
+        </div>
+        <div id="levelContainer">
+            <span id="levelText">Level: 1</span>
+            <div class="progress-bar">
+                <div class="progress-bar-inner"></div>
+            </div>
+    </nav>
+    <div class="container">
+        <div id="tasksSection">
+            <h1>Tasks</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Deadline</th>
+                        <th>Completed</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <button id="addTaskBtn" class="btn">+ Add Task</button>
+            <div id="taskForm" class="task-form hidden">
+                <div class="form-container">
+                    <h2 class="form-title">Add New Task</h2>
+                    <form id="addTaskForm">
+                        <div class="form-group">
+                            <label for="taskDescription">Task Description</label>
+                            <input type="text" id="taskDescription" placeholder="Enter task description" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="taskDate">Deadline</label>
+                            <input type="datetime-local" id="taskDate" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="taskPoints">Points</label>
+                            <select id="taskPoints" required>
+                                <option value="10">10</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                                <option value="500">500</option>
+                                <option value="1000">1000</option>
+                            </select>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-cancel" onclick="document.getElementById('taskForm').classList.add('hidden')">Cancel</button>
+                            <button type="submit" class="btn btn-submit">Add Task</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        <div id="levelSection" class="hidden">
+            <h1 id="levelText">Level: 1</h1>
+            <div class="progress-bar">
+                <div class="progress-bar-inner"></div>
+            </div>
+            <p id="expText">0 / 10</p>
+            <button id="resetLevelBtn" class="btn">Reset Level</button> <!-- Reset Level Button -->
+        </div>
+        <div id="historySection" class="hidden">
+            <h1>Task History</h1>
+            <button id="resetHistoryBtn" class="btn">Reset History</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Created At</th>
+                        <th>Completed At</th>
+                        <th>Points</th>
+                        <th>Deleted At</th>
+                    </tr>
+                </thead>
+                <tbody id="historyTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
