@@ -30,7 +30,7 @@ KuroToDoList is a simple to-do list web application that helps users manage thei
    - git clone https://github.com/Kxrochi/KuroToDoList.git
    - cd KuroToDoList
 
-    # OR
+    #### OR
    - Download the repository as a zip file and extract it to your desired location.
 
 2. Install the dependencies:
